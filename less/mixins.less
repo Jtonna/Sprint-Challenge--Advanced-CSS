@@ -1,1 +1,40 @@
 // Mixins Here
+.flex-it(@direction: column, @justify-c: center, @align-i: center) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify-c;
+    align-items: @align-i;
+}
+.flex-it2(){
+    flex-direction: column-reverse;
+}
+.nav-text(@size: 1.6rem) {
+    font-size: @size;
+    text-decoration: none;
+    color: @ebony-clay;
+}
+.button-style(@radius: 1rem, @bg: red) {
+    //sets the button to red by default
+    color: @porcelain;
+    border-radius: @radius;
+    background: @bg;
+    font-size: 2rem;
+    width: 30%;
+    text-align: center;
+    padding: 1rem 0 1rem;
+        // creates a border that is transparent until :hover
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+
+    &:hover {
+        background: @porcelain;
+        color: @btn-bg-color;
+        border: 1px solid @btn-bg-color;
+    }
+    @media @phone {
+        width: 100%;
+        padding: 2rem 0 2rem;
+    }
+}
