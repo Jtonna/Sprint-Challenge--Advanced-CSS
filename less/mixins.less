@@ -1,12 +1,34 @@
 // Mixins Here
-.flex-it(@direction: column){
+.flex-it(@direction: column) {
     display: flex;
-	justify-content: center;
+    justify-content: center;
     align-items: center;
     flex-direction: @direction;
 }
-.nav-text(@size: 1.6rem){
+
+.nav-text(@size: 1.6rem) {
     font-size: @size;
     text-decoration: none;
     color: @ebony-clay;
+}
+.button-style(@radius: 1rem, @bg: red) {
+    //sets the button to red by default
+    color: @porcelain;
+    border-radius: @radius;
+    background: @bg;
+    font-size: 2rem;
+    width: 30%;
+    text-align: center;
+    padding: 1rem 0 1rem;
+        // creates a border that is transparent until :hover
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+
+    &:hover {
+        background: @porcelain;
+        color: @btn-bg-color;
+        border: 1px solid @btn-bg-color;
+    }
 }

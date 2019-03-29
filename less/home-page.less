@@ -3,7 +3,10 @@
 .home {
 
   .intro {
-
+    img{
+      border-radius: .5rem;
+      width: 100%;
+    }
     h2 {
       padding: 15px;
     }
@@ -58,6 +61,8 @@
       }
 
       .btn {
+        .button-style(@radius: .5rem, @bg: @btn-bg-color);   
+        //changes the bg of the button to the proper color
       }
     }
 
