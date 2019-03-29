@@ -1,11 +1,13 @@
 // Mixins Here
-.flex-it(@direction: column) {
+.flex-it(@direction: column, @justify-c: center, @align-i: center) {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: @direction;
+    justify-content: @justify-c;
+    align-items: @align-i;
 }
-
+.flex-it2(){
+    flex-direction: column-reverse;
+}
 .nav-text(@size: 1.6rem) {
     font-size: @size;
     text-decoration: none;
@@ -30,5 +32,9 @@
         background: @porcelain;
         color: @btn-bg-color;
         border: 1px solid @btn-bg-color;
+    }
+    @media @phone {
+        width: 100%;
+        padding: 2rem 0 2rem;
     }
 }
